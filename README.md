@@ -5,9 +5,30 @@ The proposed mechanism uses Forward Error Correction (FEC) encoded RTP packets (
 
 ### Repository structure 
 ```
-+ -ns2 
-+ -gstreamer
++-ns2
+ +-rtplib
+ +-traffic-generator
+ +-scripts
++-gstreamer
+ +-gst-dependencies
+ +-jrtplib
+ +-amusys
 ```
+
+The ns-2 sub-directory contains the video traffic generator, currently a very simple model. 
+A more complex model is currently under development ans is based on measurements (VP8 and H.264).
+The rtplib is a fork of [ref missing](), we added 4585 timing rules. Additionally all the 
+FEC related code. The scripts folder contains all the code to drive the tests and computing the results
+
+The gstreamer sub-directory contains the jrtplib fork modified for performing congestion control,
+the amusys code that manages the codec and application constraints/settings.
+
+The YUV sequences are available at [xiph-seq](http://media.xiph.org/video/derf/) and [HEVC-seq](http://www.netlab.tkk.fi/~varun/test_sequences/). The HEVC sequences were 
+contributed by Stephan Wenger at IETF88, Vancouver.
+
+TODO:
+- [ ] build process and scripts
+- [ ] test scripts and post-processing details
 
 ### Referring to the Code
 
