@@ -9,10 +9,15 @@ The proposed mechanism uses Forward Error Correction (FEC) encoded RTP packets (
  +-rtplib
  +-traffic-generator
  +-scripts
-+-gstreamer
++-amusys
  +-gst-dependencies
- +-jrtplib
- +-amusys
+  +- gstreamer-0.10.36
+  +- gst-plugins-base-0.10.36
+  +- gst-plugins-bad (missing from tar-ball)
+  +- gst-plugins-ugly-0.10.19
+  +- gst-ffmpeg-0.10.13
+ +- jrtplib-3.8.2
+ +-amusys-endpoint
 ```
 
 The ns-2 sub-directory contains the video traffic generator, currently a very simple model. 
